@@ -1,0 +1,27 @@
+<h1>In index page</h1>
+<%= render 'top_hits' %>
+<table>
+<tr>
+<td><%=link_to "New Projects", new_project_path %></td>
+</tr>
+
+<tr>
+<%@title.each do |t|%>
+  <td><%=t%></td>
+<%end%>
+</tr>
+<%@projects.each do |p| %>
+	<tr>
+  
+  <td><%=p.title %></td>
+  <td><%=p.description %></td>
+  <td><%=p.abstract %></td>
+  <td><%=p.budget %></td>
+  <!-- <td><%=p.created_at %></td> -->
+  <!-- <td><%=p.updated_at %></td> -->
+  <td><%=link_to "Show", project_path(p.id) %></td>
+  <td><%=link_to "Edit", edit_project_path(p.id) %></td>
+  <td><%=link_to "Delete", project_path(p.id), method: 'delete' %></td>
+  </tr>
+<%end%>
+</table>

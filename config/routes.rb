@@ -57,7 +57,14 @@ KickStarter::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
 
-  resources :projects 
+  resources :projects do
+    collection do 
+      get :top_hits
+    end
+  end
 
   resources :students
+
+
+  root :to => 'projects#index'
 end
