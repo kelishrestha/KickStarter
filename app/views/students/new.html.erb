@@ -1,0 +1,11 @@
+Hello Students
+<%= form_for @student do |l| %>
+	<%= l.label :name, 'What is your name?'%>
+	<%= l.text_field :name %>
+
+	<%= l.label :rollno %>
+	<%= l.text_field :rollno %>
+	
+	<%= l.submit 'Create New Student'%>
+
+	<%end%>
