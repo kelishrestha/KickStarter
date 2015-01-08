@@ -1,3 +1,6 @@
 class Student < ActiveRecord::Base
-  attr_accessible :name, :rollno
+  belongs_to :project 
+   
+  has_one :profile
+  attr_accessible :email_address, :name, :rollno
 end

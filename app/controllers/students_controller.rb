@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-	
+
 	def new
 		@student = Student.new
 	end
@@ -18,5 +18,8 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
+  def edit
+    @student
+  end
 
 end
